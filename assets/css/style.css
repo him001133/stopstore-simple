@@ -47,3 +47,34 @@ a { color: var(--primary); text-decoration: none; font-weight: bold; }
     color: #777;
     font-size: 0.9em;
 }
+/* Header Styles */
+.site-header {
+    background: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text);
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 0.9rem;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
