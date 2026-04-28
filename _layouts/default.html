@@ -14,13 +14,18 @@
             </nav>
         </div>
     </header>
+    <footer class="site-footer">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Built for deals.</p>
+    <nav class="footer-nav">
+        <a href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a> | 
+        <a href="{{ site.baseurl }}/terms-of-service">Terms of Service</a>
+    </nav>
+</footer>
 
     <div class="container">
         {{ content }}
     </div>
 
-    <footer class="site-footer">
-        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Built for deals.</p>
-    </footer>
+   
 </body>
 </html>
