@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
@@ -14,18 +15,19 @@
             </nav>
         </div>
     </header>
-    <footer class="site-footer">
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Built for deals.</p>
-    <nav class="footer-nav">
-        <a href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a> | 
-        <a href="{{ site.baseurl }}/terms-of-service">Terms of Service</a>
-    </nav>
-</footer>
 
-    <div class="container">
+    <main class="container">
         {{ content }}
-    </div>
+    </main>
 
-   
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Built for deals.</p>
+            <nav class="footer-nav">
+                <a href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a> | 
+                <a href="{{ site.baseurl }}/terms-of-service">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
