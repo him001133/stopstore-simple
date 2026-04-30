@@ -1,8 +1,15 @@
 ---
 layout: default
 ---
-<article>
-    {{ content }}
+<article class="post-wrapper">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <hr class="post-divider">
+    
+    <div class="post-body">
+        {{ content }}
+    </div>
 </article>
-<br>
-<a href="/">← Back to Deals</a>
+
+<div class="post-navigation">
+    <a href="{{ site.baseurl }}/" class="btn">← Back to All Deals</a>
+</div>
