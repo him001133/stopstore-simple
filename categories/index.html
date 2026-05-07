@@ -1,0 +1,74 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<h1>Browse by Category</h1>
+
+{% assign categories = site.categories | sort %}
+
+{% if categories.size > 0 %}
+  <div class="categories-list">
+    {% for category in categories %}
+      {% assign category_name = category | first %}
+      {% assign category_posts = category | last %}
+      <div class="category-item">
+        <h2 id="{{ category_name | slugify }}">{{ category_name }}</h2>
+        <p>{{ category_posts.size }} post{{ category_posts.size | pluralize }}</p>
+        <ul>
+          {% for post in category_posts %}
+            <li>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              <span class="post-date">({{ post.date | date: "%B %d, %Y" }})</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No categories found.</p>
+{% endif %}
+
+<style>
+  .categories-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .category-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  .category-item h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    text-transform: capitalize;
+  }
+  .category-item ul {
+    list-style: none;
+    padding: 0;
+  }
+  .category-item li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .category-item li:last-child {
+    border-bottom: none;
+  }
+  .category-item a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .category-item a:hover {
+    text-decoration: underline;
+  }
+  .post-date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-left: 10px;
+  }
+</style>

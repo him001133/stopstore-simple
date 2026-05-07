@@ -1,0 +1,74 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<h1>Browse by Tag</h1>
+
+{% assign tags = site.tags | sort %}
+
+{% if tags.size > 0 %}
+  <div class="tags-list">
+    {% for tag in tags %}
+      {% assign tag_name = tag | first %}
+      {% assign tag_posts = tag | last %}
+      <div class="tag-item">
+        <h2 id="{{ tag_name | slugify }}">{{ tag_name }}</h2>
+        <p>{{ tag_posts.size }} post{{ tag_posts.size | pluralize }}</p>
+        <ul>
+          {% for post in tag_posts %}
+            <li>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              <span class="post-date">({{ post.date | date: "%B %d, %Y" }})</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No tags found.</p>
+{% endif %}
+
+<style>
+  .tags-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .tag-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  .tag-item h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    text-transform: capitalize;
+  }
+  .tag-item ul {
+    list-style: none;
+    padding: 0;
+  }
+  .tag-item li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .tag-item li:last-child {
+    border-bottom: none;
+  }
+  .tag-item a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .tag-item a:hover {
+    text-decoration: underline;
+  }
+  .post-date {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-left: 10px;
+  }
+</style>
