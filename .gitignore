@@ -3,46 +3,45 @@
 node_modules/
 
 # Build artifacts
-_dist/
-_site/
-.jekyll-cache/
-
-# Logs
-*.log
+dist/
+build/
+target/
 
 # Environment variables
 .env
 .env.local
-*.env.*
+.env.*
 
-# Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*.tmp
-
-# OS generated files
-.DS_Store
-Thumbs.db
+# Logs
+*.log
 
 # Coverage reports
 coverage/
 htmlcov/
 .coverage
 
-# Python
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python specific
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
 *.so
-.coverage
-.pytest_cache/
-.mypy_cache/
 
-# Jekyll
-.sass-cache/
-.jekyll-metadata
+# Cache directories
+.mypy_cache/
+.pytest_cache/
+.coverage*
+nosetests.xml
 ```
