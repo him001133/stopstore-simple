@@ -113,3 +113,24 @@ body {
 .btn-x { background: #000; }
 
 .site-footer { text-align: center; padding: 40px 0; border-top: 1px solid #ddd; color: #777; }
+.footer-nav { margin-top: 15px; }
+.footer-nav a { color: #777; text-decoration: none; margin: 0 10px; }
+.footer-nav a:hover { text-decoration: underline; }
+
+/* Post Styles */
+.post-wrapper { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: var(--shadow); }
+.post-title { margin-top: 0; color: var(--text); }
+.post-divider { border: none; border-top: 1px solid #eee; margin: 20px 0; }
+.post-body { line-height: 1.8; }
+.post-navigation { margin-top: 30px; }
+
+/* Category and Tag Pages */
+.categories-list, .tags-list { max-width: 800px; margin: 0 auto; }
+.category-item, .tag-item { margin-bottom: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+.category-item h2, .tag-item h2 { color: #2c3e50; margin-top: 0; text-transform: capitalize; }
+.category-item ul, .tag-item ul { list-style: none; padding: 0; }
+.category-item li, .tag-item li { padding: 10px 0; border-bottom: 1px solid #eee; }
+.category-item li:last-child, .tag-item li:last-child { border-bottom: none; }
+.category-item a, .tag-item a { color: #3498db; text-decoration: none; font-weight: 500; }
+.category-item a:hover, .tag-item a:hover { text-decoration: underline; }
+.post-date { color: #7f8c8d; font-size: 0.9em; margin-left: 10px; }

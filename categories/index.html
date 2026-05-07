@@ -15,7 +15,7 @@ permalink: /categories/
       {% assign category_posts = category | last %}
       <div class="category-item">
         <h2 id="{{ category_name | slugify }}">{{ category_name }}</h2>
-        <p>{{ category_posts.size }} post{{ category_posts.size | pluralize }}</p>
+        <p>{{ category_posts.size }} post{% if category_posts.size != 1 %}s{% endif %}</p>
         <ul>
           {% for post in category_posts %}
             <li>

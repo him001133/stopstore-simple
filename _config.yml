@@ -4,6 +4,7 @@ encoding: "utf-8"
 markdown: kramdown
 baseurl: "/stopstore-simple"
 url: "https://him001133.github.io"
+permalink: /:year/:month/:day/:title/
 
 # Categories and Tags
 category_archive_path: "/categories/"

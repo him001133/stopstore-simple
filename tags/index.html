@@ -15,7 +15,7 @@ permalink: /tags/
       {% assign tag_posts = tag | last %}
       <div class="tag-item">
         <h2 id="{{ tag_name | slugify }}">{{ tag_name }}</h2>
-        <p>{{ tag_posts.size }} post{{ tag_posts.size | pluralize }}</p>
+        <p>{{ tag_posts.size }} post{% if tag_posts.size != 1 %}s{% endif %}</p>
         <ul>
           {% for post in tag_posts %}
             <li>
