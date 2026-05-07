@@ -1,5 +1,8 @@
 ---
 layout: default
+title: "First Post"
+categories: [General]
+tags: [welcome, first-post]
 ---
 <article>
     {{ content }}

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Best LED Wall Lights for Indian Homes Under ₹500 (Top Budget Picks 2026)"
+categories: [Lighting, Home Decor]
+tags: [LED, budget, India, home improvement, lighting]
 ---
 
 <style>
